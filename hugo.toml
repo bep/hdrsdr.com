@@ -46,6 +46,5 @@ disableKinds = ["taxonomy", "term", "404", "section", "page", "section", "rss"]
 	filename   = "sitemap.xml"
 
 [module]
-
 	[[module.imports]]
 		path = "github.com/bep/gitjoin.com"

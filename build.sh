@@ -30,6 +30,9 @@ main() {
 	# Set the build timezone
 	export TZ=Europe/Oslo
 
+	# Set the build cache directory
+	export HUGO_CACHEDIR="${PWD}/.cache/hugo_cache"
+
 	# Create and move into a temporary directory for downloads
 	build_temp_dir=$(mktemp -d)
 	pushd "${build_temp_dir}" >/dev/null
@@ -68,7 +71,7 @@ main() {
 
 	# Build the site
 	echo "Building the site..."
-	hugo build --gc --minify --cacheDir=$PWD/.cache
+	hugo build --gc --minify
 }
 
 main "$@"
